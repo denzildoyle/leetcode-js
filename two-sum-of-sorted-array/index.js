@@ -1,4 +1,4 @@
-module.exports = (numbers, target)  => {
+module.exports.twoSum = (numbers, target)  => {
     let aPointer = 0;
     let bPointer = numbers.length - 1;
     let sum = 0;
@@ -15,4 +15,14 @@ module.exports = (numbers, target)  => {
     }
     
     return [aPointer + 1 , bPointer + 1];
+}
+
+//won't work for repeating values
+module.exports.twoSum2 = (numbers, target) => {
+    for(let i = 0; i < numbers.length; i++){
+        let idx = numbers.indexOf(target - numbers[i]);
+        if (idx != -1){
+            return [i+1,idx+1]; 
+        }
+    }
 }
