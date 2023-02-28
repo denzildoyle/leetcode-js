@@ -19,7 +19,6 @@ module.exports.solution1 = (word) => {
         return false;
 };
 
-
 module.exports.solution2 = (word) => {
     if(word == word.toUpperCase() || word == word.toLowerCase())
         return true;
